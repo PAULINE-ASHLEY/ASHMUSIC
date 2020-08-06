@@ -1,0 +1,694 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>ASH MUSIC</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <style>
+    @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css');
+    @import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+}
+nav{
+  background: black;
+  height: 80px;
+  width: 100%;
+}
+label.logo{
+  color: green;
+  font-size: 30px;
+  line-height: 80px;
+  padding: 0 140px;
+  font-weight: 600;
+  font-family: 'quicksand', sans-serif;
+}
+nav ul{
+  float: right;
+  margin-right: 60px;
+}
+nav ul li{
+  display: inline-block;
+  line-height: 80px;
+  margin: 0 2px;
+}
+nav ul li a{
+  color: white;
+  font-weight: 500;
+  font-size: 16px;
+  padding: 7px 13px;
+  border-radius: 3px;
+  font-family: 'quicksand', sans-serif;
+}
+a.active,a:hover{
+  background: green;
+  transition: .5s;
+}
+.checkbtn{
+  font-size: 30px;
+  color: white;
+  float: right;
+  line-height: 80px;
+  margin-right: 40px;
+  cursor: pointer;
+  display: none;
+}
+#check{
+  display: none;
+}
+
+
+@media (max-width: 952px){
+  label.logo{
+    font-size: 13px;
+    padding-left: 25px;
+  }
+  nav ul li a{
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 858px){
+  .checkbtn{
+    display: block;
+    margin-right: 40px;
+  }
+  ul{
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background: black;
+    top: 80px;
+    left: -100%;
+    text-align: center;
+    transition: all .5s;
+  }
+  nav ul li{
+    display: block;
+    margin: 50px 0;
+    line-height: 30px;
+  }
+  nav ul li a{
+    font-size: 20px;
+  }
+  #check:checked ~ ul{
+    left: 0;
+  }
+}
+html{
+  font-family: 'quicksand', sans-serif;
+}
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+[class*="col-"] {
+  float: left;
+  padding: 15px;
+}
+/* For mobile phones: */
+[class*="col-"] {
+  width: 100%;
+}
+
+@media only screen and (min-width: 600px) {
+  /* For tablets: */
+  .col-s-1 {width: 8.33%;}
+  .col-s-2 {width: 16.66%;}
+  .col-s-3 {width: 25%;}
+  .col-s-4 {width: 33.33%;}
+  .col-s-5 {width: 41.66%;}
+  .col-s-6 {width: 50%;}
+  .col-s-7 {width: 58.33%;}
+  .col-s-8 {width: 66.66%;}
+  .col-s-9 {width: 75%;}
+  .col-s-10 {width: 83.33%;}
+  .col-s-11 {width: 91.66%;}
+  .col-s-12 {width: 100%;}
+}
+@media only screen and (min-width: 768px) {
+  /* For desktop: */
+  .col-1 {width: 8.33%;}
+  .col-2 {width: 16.66%;}
+  .col-3 {width: 25%;}
+  .col-4 {width: 33.33%;}
+  .col-5 {width: 41.66%;}
+  .col-6 {width: 50%;}
+  .col-7 {width: 58.33%;}
+  .col-8 {width: 66.66%;}
+  .col-9 {width: 75%;}
+  .col-10 {width: 83.33%;}
+  .col-11 {width: 91.66%;}
+  .col-12 {width: 100%;}
+}
+.fa {
+  padding: 20px;
+  font-size: 30px;
+  width: 50px;
+  text-align: center;
+  text-decoration: none;
+  margin: 5px 2px;
+}
+.fa-facebook {
+  color: blue;
+}
+.fa-youtube {
+  color: red;
+}
+
+.fa-twitter {
+  color: blue;
+}
+.fa-instagram {
+  color: purple;
+}
+.fa-snapchat-ghost {
+  color: yellow;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+a{
+  color: white;
+}
+button{
+  background-color: black;
+  color:white;
+}
+</style>
+</head>
+<body>
+<nav>
+  <input type="checkbox" id="check">
+  <label for="check" class="checkbtn">
+    <i class="fas fa-bars"></i>
+  </label>
+  <label class="logo">
+    <i class='fas fa-headphones-alt' style="font-size:48px;color:white"></i>
+    ASH MUSIC
+  </label>
+  <ul>
+<li><a href="index.html">Home</a></li>
+<li><a href="premium.html">Premium</a></li>
+<li><a href="artists.html">Artists</a></li>
+<li><a href="Playlists.html">Playlist</a></li>
+<li><a href="signup.html">Sign up</a></li>
+<li><a href="login.html">Log in</a></li>
+</ul>
+</nav>
+
+<h1 style="font-size:35px;padding-top:40px;text-align:center;font-weight:bolder;text-decoration:underline">PLAYLIST</h1>
+<p style="font-size:25px;padding-top:20px;text-align:center;font-weight:bolder">Songs that are on Ash Music</p>
+<p style="font-size:25px;padding-top:20px;text-align:center;font-weight:bolder;color:green">Refresh page to reload song</p>
+
+<div class="row">
+  <div class="col-2 col-s-2 menu">
+  <img src="images/geazy.jpg" alt="geazy" style="max-width:100%;height:auto;">
+  <p style="text-align:center">I MEAN IT</p>
+  <p style="text-align:center;color:grey;text-decoration:bolder">G-Eazy</p>
+  <audio id="myAudio">
+    <source src="audio/geazy.mp3" type="audio/mpeg">
+  </audio>
+  <button onclick="playAudio1()" type="button">PLAY</button>
+  <button onclick="pauseAudio1()" type="button">PAUSE</button>
+  <script>
+var x = document.getElementById("myAudio");
+
+function playAudio1() {
+  x.play();
+}
+
+function pauseAudio1() {
+  x.pause();
+}
+</script>
+
+  <img src="images/martingarrix.jpg" alt="martingarrix" style="max-width:100%;height:auto;padding-top:40px;">
+  <p style="text-align:center">ANIMALS</p>
+  <p style="text-align:center;color:grey;text-decoration:bolder">Martin Garrix</p>
+  <audio id="myAudio1">
+    <source src="audio/martingarrix.mp3" type="audio/mpeg">
+  </audio>
+  <button onclick="playAudio2()" type="button">PLAY</button>
+  <button onclick="pauseAudio2()" type="button">PAUSE</button>
+  <script>
+  var y = document.getElementById("myAudio1");
+
+  function playAudio2() {
+  y.play();
+  }
+
+  function pauseAudio2() {
+  y.pause();
+  }
+  </script>
+
+  <img src="images/jcole.jpg" alt="jcole" style="max-width:100%;height:auto;padding-top:40px;">
+  <p style="text-align:center">LOVE YOURS</p>
+  <p style="text-align:center;color:grey;text-decoration:bolder">J.Cole</p>
+  <audio id="myAudio3">
+    <source src="audio/jcole.mp3" type="audio/mpeg">
+  </audio>
+  <button onclick="playAudio3()" type="button">PLAY</button>
+  <button onclick="pauseAudio3()" type="button">PAUSE</button>
+  <script>
+  var b = document.getElementById("myAudio3");
+
+  function playAudio3() {
+  b.play();
+  }
+
+  function pauseAudio3() {
+  b.pause();
+  }
+  </script>
+
+
+  <img src="images/jonbellion.jpg" alt="jonbellion" style="max-width:100%;height:auto;padding-top:40px;">
+  <p style="text-align:center">MAYBE IDK</p>
+  <p style="text-align:center;color:grey;text-decoration:bolder">Jon Bellion</p>
+  <audio id="myAudio4">
+    <source src="audio/jonbellion.mp3" type="audio/mpeg">
+  </audio>
+  <button onclick="playAudio4()" type="button">PLAY</button>
+  <button onclick="pauseAudio4()" type="button">PAUSE</button>
+  <script>
+  var c = document.getElementById("myAudio4");
+
+  function playAudio4() {
+  c.play();
+  }
+
+  function pauseAudio4() {
+  c.pause();
+  }
+  </script>
+  </div>
+
+  <div class="col-2 col-s-4">
+    <img src="images/tiesto.jpg" alt="tiesto" style="max-width:100%;height:auto;">
+    <p style="text-align:center">RED LIGHTS</p>
+    <p style="text-align:center;color:grey;text-decoration:bolder">Tiesto</p>
+    <audio id="myAudio5">
+      <source src="audio/tiesto.mp3" type="audio/mpeg">
+    </audio>
+    <button onclick="playAudio5()" type="button">PLAY</button>
+    <button onclick="pauseAudio5()" type="button">PAUSE</button>
+    <script>
+    var d = document.getElementById("myAudio5");
+
+    function playAudio5() {
+    d.play();
+    }
+
+    function pauseAudio5() {
+    d.pause();
+    }
+    </script>
+
+
+    <img src="images/sautisol.jpg" alt="sautisol" style="max-width:100%;height:auto;padding-top:40px;">
+    <p style="text-align:center">INSECURE</p>
+    <p style="text-align:center;color:grey;text-decoration:bolder">Sauti Sol</p>
+    <audio id="myAudio6">
+      <source src="audio/sautisol.mp3" type="audio/mpeg">
+    </audio>
+    <button onclick="playAudio6()" type="button">PLAY</button>
+    <button onclick="pauseAudio6()" type="button">PAUSE</button>
+    <script>
+    var e = document.getElementById("myAudio6");
+
+    function playAudio6() {
+    e.play();
+    }
+
+    function pauseAudio6() {
+    e.pause();
+    }
+    </script>
+
+
+    <img src="images/alecbenjamin.jpg" alt="alecbenjamin" style="max-width:100%;height:auto;padding-top:40px;">
+    <p style="text-align:center">LET ME DOWN SLOWLY</p>
+    <p style="text-align:center;color:grey;text-decoration:bolder">Alec Benjamin</p>
+    <audio id="myAudio7">
+      <source src="audio/alecbenjamin.mp3" type="audio/mpeg">
+    </audio>
+    <button onclick="playAudio7()" type="button">PLAY</button>
+    <button onclick="pauseAudio7()" type="button">PAUSE</button>
+    <script>
+    var f = document.getElementById("myAudio7");
+
+    function playAudio7() {
+    f.play();
+    }
+
+    function pauseAudio7() {
+    f.pause();
+    }
+    </script>
+
+
+    <img src="images/halsey.jpg" alt="halsey" style="max-width:100%;height:auto;padding-top:40px;">
+    <p style="text-align:center">WITHOUT ME</p>
+    <p style="text-align:center;color:grey;text-decoration:bolder">Halsey</p>
+    <audio id="myAudio8">
+      <source src="audio/halsey.mp3" type="audio/mpeg">
+    </audio>
+    <button onclick="playAudio8()" type="button">PLAY</button>
+    <button onclick="pauseAudio8()" type="button">PAUSE</button>
+    <script>
+    var g = document.getElementById("myAudio8");
+
+    function playAudio8() {
+    g.play();
+    }
+
+    function pauseAudio8() {
+    g.pause();
+    }
+    </script>
+
+
+</div>
+
+  <div class="col-2 col-s-6">
+    <img src="images/drake.png" alt="drake" style="max-width:100%;height:auto;">
+    <p style="text-align:center">MONEY IN THE GRAVE</p>
+    <p style="text-align:center;color:grey;text-decoration:bolder">Drake ft.Rick Ross</p>
+    <audio id="myAudio9">
+      <source src="audio/drake.mp3" type="audio/mpeg">
+    </audio>
+    <button onclick="playAudio9()" type="button">PLAY</button>
+    <button onclick="pauseAudio9()" type="button">PAUSE</button>
+    <script>
+    var h = document.getElementById("myAudio9");
+
+    function playAudio9() {
+    h.play();
+    }
+
+    function pauseAudio9() {
+    h.pause();
+    }
+    </script>
+
+
+    <img src="images/justintimberlake.jpg" alt="justintimberlake" style="max-width:100%;height:auto;padding-top:40px;">
+    <p style="text-align:center">MIRROR</p>
+    <p style="text-align:center;color:grey;text-decoration:bolder">Justin Timberlake</p>
+    <audio id="myAudio10">
+      <source src="audio/justintimberlake.mp3" type="audio/mpeg">
+    </audio>
+    <button onclick="playAudio10()" type="button">PLAY</button>
+    <button onclick="pauseAudio10()" type="button">PAUSE</button>
+    <script>
+    var i = document.getElementById("myAudio10");
+
+    function playAudio10() {
+    i.play();
+    }
+
+    function pauseAudio10() {
+    i.pause();
+    }
+    </script>
+
+
+    <img src="images/niallhoran.jpg" alt="niallhoran" style="max-width:100%;height:auto;padding-top:40px;">
+    <p style="text-align:center">TOO MUCH TO ASK</p>
+    <p style="text-align:center;color:grey;text-decoration:bolder">Niall Horan</p>
+    <audio id="myAudio11">
+      <source src="audio/niallhoran.mp3" type="audio/mpeg">
+    </audio>
+    <button onclick="playAudio11()" type="button">PLAY</button>
+    <button onclick="pauseAudio11()" type="button">PAUSE</button>
+    <script>
+    var j = document.getElementById("myAudio11");
+
+    function playAudio11() {
+    j.play();
+    }
+
+    function pauseAudio11() {
+    j.pause();
+    }
+    </script>
+
+
+</div>
+
+    <div class="col-2 col-s-8">
+      <img src="images/tyga.jpg" alt="tyga" style="max-width:100%;height:auto;">
+      <p style="text-align:center">STIMULATED</p>
+      <p style="text-align:center;color:grey;text-decoration:bolder">Tyga</p>
+      <audio id="myAudio12">
+        <source src="audio/stimulated.mp3" type="audio/mpeg">
+      </audio>
+      <button onclick="playAudio12()" type="button">PLAY</button>
+      <button onclick="pauseAudio12()" type="button">PAUSE</button>
+      <script>
+      var k = document.getElementById("myAudio12");
+
+      function playAudio12() {
+      k.play();
+      }
+
+      function pauseAudio12() {
+      k.pause();
+      }
+      </script>
+
+
+      <img src="images/tovelo.jpg" alt="tovelo" style="max-width:100%;height:auto;padding-top:40px;">
+      <p style="text-align:center">HABITS(STAY HIGH)</p>
+      <p style="text-align:center;color:grey;text-decoration:bolder">Tove Lo</p>
+      <audio id="myAudio13">
+        <source src="audio/tovelo.mp3" type="audio/mpeg">
+      </audio>
+      <button onclick="playAudio13()" type="button">PLAY</button>
+      <button onclick="pauseAudio13()" type="button">PAUSE</button>
+      <script>
+      var l = document.getElementById("myAudio13");
+
+      function playAudio13() {
+      l.play();
+      }
+
+      function pauseAudio13() {
+      l.pause();
+      }
+      </script>
+
+
+      <img src="images/justinbieber.jpg" alt="justinbieber" style="max-width:100%;height:auto;padding-top:40px;">
+      <p style="text-align:center">YUMMY</p>
+      <p style="text-align:center;color:grey;text-decoration:bolder">Justin Bieber</p>
+      <audio id="myAudio14">
+        <source src="audio/yummy.mp3" type="audio/mpeg">
+      </audio>
+      <button onclick="playAudio14()" type="button">PLAY</button>
+      <button onclick="pauseAudio14()" type="button">PAUSE</button>
+      <script>
+      var m = document.getElementById("myAudio14");
+
+      function playAudio14() {
+      m.play();
+      }
+
+      function pauseAudio14() {
+      m.pause();
+      }
+      </script>
+
+
+</div>
+
+      <div class="col-2 col-s-10">
+        <img src="images/stormzy.png" alt="stormzy" style="max-width:100%;height:auto;">
+        <p style="text-align:center">VOSSI BOP</p>
+        <p style="text-align:center;color:grey;text-decoration:bolder">Stormzy</p>
+        <audio id="myAudio15">
+          <source src="audio/stormzy.mp3" type="audio/mpeg">
+        </audio>
+        <button onclick="playAudio15()" type="button">PLAY</button>
+        <button onclick="pauseAudio15()" type="button">PAUSE</button>
+        <script>
+        var n = document.getElementById("myAudio15");
+
+        function playAudio15() {
+        n.play();
+        }
+
+        function pauseAudio15() {
+        n.pause();
+        }
+        </script>
+
+
+        <img src="images/niviiri.jpg" alt="niviiri" style="max-width:100%;height:auto;padding-top:40px;">
+        <p style="text-align:center">POMBE SIGARA</p>
+        <p style="text-align:center;color:grey;text-decoration:bolder">Nviiri The Storyteller</p>
+        <audio id="myAudio16">
+          <source src="audio/niviiri.mp3" type="audio/mpeg">
+        </audio>
+        <button onclick="playAudio16()" type="button">PLAY</button>
+        <button onclick="pauseAudio16()" type="button">PAUSE</button>
+        <script>
+        var o = document.getElementById("myAudio16");
+
+        function playAudio16() {
+        o.play();
+        }
+
+        function pauseAudio16() {
+        o.pause();
+        }
+        </script>
+
+
+        <img src="images/marshmello.jpg" alt="marshmello" style="max-width:100%;height:auto;padding-top:40px;">
+        <p style="text-align:center">ALONE</p>
+        <p style="text-align:center;color:grey;text-decoration:bolder">Marshmello</p>
+        <audio id="myAudio17">
+          <source src="audio/marshmello.mp3" type="audio/mpeg">
+        </audio>
+        <button onclick="playAudio17()" type="button">PLAY</button>
+        <button onclick="pauseAudio17()" type="button">PAUSE</button>
+        <script>
+        var p = document.getElementById("myAudio17");
+
+        function playAudio17() {
+        p.play();
+        }
+
+        function pauseAudio17() {
+        p.pause();
+        }
+        </script>
+
+
+</div>
+
+        <div class="col-2 col-s-12">
+          <img src="images/kygo.jpeg" alt="kygo" style="max-width:100%;height:auto;">
+          <p style="text-align:center">ONLY US</p>
+          <p style="text-align:center;color:grey;text-decoration:bolder">Kygo ft Haux</p>
+          <audio id="myAudio18">
+            <source src="audio/kygo.mp3" type="audio/mpeg">
+          </audio>
+          <button onclick="playAudio18()" type="button">PLAY</button>
+          <button onclick="pauseAudio18()" type="button">PAUSE</button>
+          <script>
+          var q = document.getElementById("myAudio18");
+
+          function playAudio18() {
+          q.play();
+          }
+
+          function pauseAudio18() {
+          q.pause();
+          }
+          </script>
+
+
+          <img src="images/edsheeran.jpg" alt="edsheeran" style="max-width:100%;height:auto;padding-top:40px;">
+          <p style="text-align:center">ANTISOCIAL</p>
+          <p style="text-align:center;color:grey;text-decoration:bolder">Edsheeran ft Travis Scott</p>
+          <audio id="myAudio19">
+            <source src="audio/edsheeran.mp3" type="audio/mpeg">
+          </audio>
+          <button onclick="playAudio19()" type="button">PLAY</button>
+          <button onclick="pauseAudio19()" type="button">PAUSE</button>
+          <script>
+          var r = document.getElementById("myAudio19");
+
+          function playAudio19() {
+          r.play();
+          }
+
+          function pauseAudio19() {
+          r.pause();
+          }
+          </script>
+
+
+          <img src="images/sia.jpg" alt="sia" style="max-width:100%;height:auto;padding-top:40px;">
+          <p style="text-align:center">CHANDELIER</p>
+          <p style="text-align:center;color:grey;text-decoration:bolder">Sia</p>
+          <audio id="myAudio20">
+            <source src="audio/sia.mp3" type="audio/mpeg">
+          </audio>
+          <button onclick="playAudio20()" type="button">PLAY</button>
+          <button onclick="pauseAudio20()" type="button">PAUSE</button>
+          <script>
+          var s = document.getElementById("myAudio20");
+
+          function playAudio20() {
+          s.play();
+          }
+
+          function pauseAudio20() {
+          s.pause();
+          }
+          </script>
+
+
+          </div>
+
+
+</div>
+
+
+<div style="padding-top:100px" class="row" >
+  <div style="background-color: black;height:500px;" class="col-3 col-s-3 menu">
+    <h2 style="color:white;text-align:center;text-decoration:overline">SOCIAL MEDIA</h2>
+  <p style="text-align:left;color:white;font-size:14px"><a target="_blank" href="#" class="fa fa-facebook"></a>
+    Facebook-Ash Music</p>
+    <p style="text-align:left;color:white;font-size:14px"><a target="_blank" href="#" class="fa fa-youtube"></a>
+      Youtube-Ash Music</p>
+      <p style="text-align:left;color:white;font-size:14px"><a target="_blank" href="#" class="fa fa-twitter"></a>
+        Twitter-@AshMusic001</p>
+        <p style="text-align:left;color:white;font-size:14px"><a target="_blank" href="#" class="fa fa-instagram"></a>
+          Instagram-ASH_MUSIC</p>
+          <p style="text-align:left;color:white;font-size:14px"><a target="_blank" href="#" class="fa fa-snapchat-ghost"></a>
+            Snapchat-ASH-MUSIC</p><br>
+    <i class='fas fa-envelope' style="font-size:14px;color:white;margin-left:20px;">&nbsp;&nbsp;ashmusic@gmail.com</i><br><br>
+
+  </div>
+
+  <div style="background-color:black;height:500px;" class="col-3 col-s-6">
+<h2 style="color:white;text-align:center;text-decoration:overline">NAVIGATION BAR</h2>
+<p style="padding-top:40px;font-size:14px;text-align:center"><a href="index.html">HOME</a></p>
+<p style="padding-top:40px;font-size:14px;text-align:center"><a href="premium.html">PREMIUM</a></p>
+<p style="padding-top:40px;font-size:14px;text-align:center"><a href="artists.html">ARTISTS</a></p>
+<p style="padding-top:40px;font-size:14px;text-align:center"><a href="playlists.html">PLAYLIST</a></p>
+<p style="padding-top:40px;font-size:14px;text-align:center"><a href="signup.html">SIGN UP</a></p>
+<p style="padding-top:40px;font-size:14px;text-align:center"><a href="login.html">LOG IN</a></p>
+
+  </div>
+
+  <div style="background-color:black;height:500px;" class="col-3 col-s-9">
+  <h2 style="color:white;text-align:center;text-decoration:overline">ABOUT</h2><br>
+<p style="color:white;font-size:14px">A platform for music lovers.Ash Music gives
+   you instant access to good music.Just hit play to listen to anything you like.</P>
+
+
+    </div>
+
+    <div style="background-color:black;height:500px;" class="col-3 col-s-12">
+<p style="background-color: black;color: white;text-align: center;font-size: 14px;
+padding: 15px;"> &copy; 2020 All Rights Reserved. Developed & Designed by PAULINE ONDIEK. </p>
+
+      </div>
+
+    </div>
+
+</body>
+</html>
